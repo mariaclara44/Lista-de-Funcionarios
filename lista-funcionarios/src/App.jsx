@@ -2,7 +2,8 @@
 
 function App() {
   const funcionarios = [
-     { id: 1, nome: "Ana Silva",     
+     { id: 1, 
+      nome: "Ana Silva",     
       cargo: "Desenvolvedora Frontend",
       dataAdmissao: "10/02/2023",
       foto: "https://randomuser.me/api/portraits/women/44.jpg" 
@@ -13,18 +14,21 @@ function App() {
       dataAdmissao: "15/08/2022", 
       foto: "https://randomuser.me/api/portraits/men/32.jpg"  
     },
+
     { id: 3, 
       nome: "Mariana Souza",  
       cargo: "Designer UI/UX",          
       dataAdmissao: "05/11/2021", 
       foto: "https://randomuser.me/api/portraits/women/68.jpg"
      },
+
     { id: 4,
       nome: "Rafael Lima",    
       cargo: "Engenheiro DevOps",       
       dataAdmissao: "12/01/2021", 
       foto: "https://randomuser.me/api/portraits/men/22.jpg"  
     },
+
     { id: 5, 
       nome: "Juliana Costa",  
       cargo: "Gerente de Projetos",     
@@ -36,7 +40,17 @@ function App() {
 
   return (
     <>
-     
+     {funcionarios.map((funcionarios) => 
+    <Card 
+    key={funcionarios.id}
+    nome={funcionarios.nome}
+    cargo={funcionarios.cargo}
+    dataAdmissao={funcionarios.dataAdmissao}
+    foto={funcionarios.foto}
+    />
+
+    )}
+    
     </>
   )
 }
